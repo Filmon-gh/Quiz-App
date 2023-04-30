@@ -2,21 +2,40 @@
     background-color: rgb(170, 157, 157);
   }
 */
+/* Define global CSS variables for correct, wrong, and neutral colors*/
+:root {
+    --hue-correct: hsl(120, 60%, 70%) ;
+    --hue-wrong: hsl(0, 60%, 70%);
+    --hue-neutral: hsl(0, 0%, 70%);
+  }
+
+/* Style the container box for the quiz app */
   #container{
-    height: 300px;
-    width: 80%;
-    padding: 20px;
+    --hue: var(--hue-neutral);
+    height: 500px;
+    width: 800px;
+    max-width: 80%;
+    padding: 15px;
     border-radius: 10px;
-    max-width: 0 auto;
     border: 2px solid #333;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    background-color: #628ddd;
-    margin:0 auto;
+    background-color: hsl(var(--hue), 100%, 20%);
+    margin:0 auto;/* Center the container box horizontally */
     
   }
 
+   .correct {
+    --hue: var(--hue-correct);
+  
+  }
+
+  .wrong {
+    --color : var(--wrong-color);
+  
+  }
+
   #container header {
-    height: 60px;
+    height: 60px; 
     padding: 20px;
     border-radius: 10px;
     border: 2px solid #333;
@@ -68,9 +87,6 @@
     text-align: center;
     line-height: 40px;
 
-
-  
-    
   }
 
 
@@ -106,6 +122,8 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
   }
 
   #progress {
