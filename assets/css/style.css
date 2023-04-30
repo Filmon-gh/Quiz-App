@@ -149,3 +149,14 @@
     color: #333;
     font-size: 18px;    
   }
+  
+  #start #next {
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;   
+  }
+
+  .hide {
+    display: none;    
+  }
+  
