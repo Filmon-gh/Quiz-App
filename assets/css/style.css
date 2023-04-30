@@ -4,13 +4,13 @@
 */
 /* Define global CSS variables for correct, wrong, and neutral colors*/
 :root {
-    --hue-correct: hsl(120, 60%, 70%) ;
-    --hue-wrong: hsl(0, 60%, 70%);
-    --hue-neutral: hsl(0, 0%, 70%);
+    --hue-correct: 145;
+    --hue-wrong: 0;
+    --hue-neutral: 200;
   }
 
 /* Style the container box for the quiz app */
-  #container{
+  .container{
     --hue: var(--hue-neutral);
     height: 500px;
     width: 800px;
@@ -24,17 +24,16 @@
     
   }
 
-   .correct {
+  .correct {
     --hue: var(--hue-correct);
-  
   }
 
   .wrong {
-    --color : var(--wrong-color);
-  
+    --hue: var(--hue-wrong);
+
   }
 
-  #container header {
+  .container header {
     height: 60px; 
     padding: 20px;
     border-radius: 10px;
@@ -48,13 +47,13 @@
     
   }
 
-  #container #title h1 {
+  .container #title h1 {
     font-size: 50px;
     font-weight: 400;
     
   }
 
-  #container header #time-container{
+  .container header #time-container{
     height: 50px;
     width: 150px;
     display: flex;
@@ -67,14 +66,14 @@
     
   }
 
-  #container header .clock {
+  .container header .clock {
     font-size: 20px;
     font-weight: 450;
     user-select: none;
     
   }
 
-  #container header .countdown {
+  .container header .countdown {
     user-select: none;
     background-color: #08182c;
     border-radius: 10px;
@@ -110,20 +109,40 @@
   }
 
   #choices {
-    margin-top: 30px;
     
+    margin-top: 30px;
+   
+
   }
 
-  #choice1, #choice2, #choice3, #choice4 {
+  .choices:hover {
+    color: #a4c236;
+
+  }
+
+ 
+
+  .choice {
+    --hue: var(--hue-neutral);
+    background-color: hsl(var(--hue), 100%, 50%);
     font-size: 18px;
     color: #333;
-    background-color: #f2f2f2;
-    padding: 10px;
+    padding: 5px  10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 10px;
     display: flex;
     flex-direction: column;
+    outline: none;
+  }
+
+  .choice.correct {
+    --hue: var(--hue-correct);
+
+  }
+  .choice.wrong {
+    --hue: var(--hue-wrong);
+
   }
 
   #progress {
