@@ -1,7 +1,12 @@
 
+const activateButton = document.getElementById("Start");
 
 
-function startQuestion() {
+activateButton.addEventListener("click", startQuiz);
+
+function startQuiz() {
+    console.log("started")
+    activateButton.classList.add("hide");
    
   }
 
