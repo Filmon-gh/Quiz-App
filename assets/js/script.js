@@ -6,10 +6,16 @@ const quizChoices = document.getElementById("choices");
 const questionDisplay = document.getElementById("question");
 const answerChoices = document.getElementById("choices");
 const container = document.querySelector(".container");
+const questionNumberElement = document.getElementById("question-number");
 
-let randomizedQuestions, currentQuestion
+
+let randomizedQuestions, currentQuestion, totalQuestions;
 
 activateButton.addEventListener("click", startQuiz);
+nextQuestionButton.addEventListener('click', () => {
+  currentQuestion++
+  NextQuestion()
+})
 
 
 
@@ -17,18 +23,28 @@ function startQuiz() {
     console.log("started")
     activateButton.classList.add("hide");
     quizQuestion.classList.remove("hide");
-    quizChoices.classList.remove("hide");
+    quizChoices.classList.remove("hide"); 
     randomizedQuestions = questions.sort(() => Math.random() - .5);
     currentQuestion = 0
+    totalQuestions = randomizedQuestions.length;
+    questionNumberElement.classList.remove("hide");// Show the question number element by removing the "hide" class.
+    updateQuestionNumber();
     NextQuestion() 
    
   }
+  // Updates the displayed question number based on the current question and the total number of questions
+  function updateQuestionNumber() {
+    questionNumberElement.innerText = `${currentQuestion + 1}/${totalQuestions}`;
+  }
+
+
 
   function NextQuestion() {
     clearQuizState()
     showQuestion(randomizedQuestions[currentQuestion])
-   
+    updateQuestionNumber();
   }
+ 
 
 
 
@@ -47,6 +63,7 @@ function startQuiz() {
   }  
 
   function clearQuizState() {
+    removeStatusClass(document.querySelector('.container'))
     nextQuestionButton.classList.add("hide")
     while ( answerChoices.firstChild) {
       answerChoices.removeChild( answerChoices.firstChild)
@@ -59,16 +76,16 @@ function startQuiz() {
   function updateElementStatus(myElement, isCorrect ) {
     removeStatusClass(myElement)
     if (isCorrect ) {
-      myElement.classList.add('correct')
+      myElement.classList.add("correct")
     } else {
-      myElement.classList.add('wrong')
+      myElement.classList.add("wrong")
     }
   }
   
   // Removes the status class from an element
   function removeStatusClass(myElement) {
-    myElement.classList.remove('correct')
-    myElement.classList.remove('wrong')
+    myElement.classList.remove("correct")
+    myElement.classList.remove("wrong")
   }
 
 // Updates the status of the container and each answer button based on the correctness of the answer selected by the user
@@ -80,11 +97,13 @@ function startQuiz() {
     Array.from( answerChoices.children).forEach(button =>{
       updateElementStatus(button, button.dataset.correct)
     })
-    if (shuffledQuestions.length > currentQuestion + 1) {
-      nextQuestionButton.classList.remove('hide')
+   
+
+    if (randomizedQuestions.length > currentQuestion + 1) {
+      nextQuestionButton.classList.remove("hide")
     } else {
-      activateButton .innerText = 'Restart'
-      nextQuestionButton.classList.remove('hide')
+      activateButton .innerText = "Restart"
+      activateButton.classList.remove("hide")
     }
   }
 
@@ -101,6 +120,33 @@ function startQuiz() {
        choices: [
         { text: '4', correct: true },
         { text: '22', correct: false }
+      ]
+    },
+    {
+      question: 'What is the result of 3 + 2 + "7" in JavaScript?',
+      choices: [
+        { text: '12', correct: false },
+        { text: '327', correct: true },
+        { text: 'NaN', correct: false },
+        { text: 'Undefined', correct: false }
+      ]
+    },
+    {
+      question: 'What is the output of the following code in JavaScript: console.log(1 + +"2" + 3 + "4")',
+      choices: [
+        { text: '1234', correct: false },
+        { text: '10NaN', correct: false },
+        { text: '16', correct: true },
+        { text: 'NaN', correct: false }
+      ]
+    },
+    {
+      question: 'What is the value of the variable x after the following code in JavaScript: let x = 5; x += "2";',
+      choices: [
+        { text: '52', correct: true },
+        { text: '7', correct: false },
+        { text: 'NaN', correct: false },
+        { text: 'Undefined', correct: false }
       ]
     },
   ];
