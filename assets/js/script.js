@@ -25,23 +25,29 @@ function startQuiz() {
   function NextQuestion() {
     showQuestion(randomizedQuestions[currentQuestion])
   }
-
-
   function showQuestion(question) {
-
     questionDisplay.innerText = question.question;
-   
+    question.choices.forEach(choice => {
+      const button = document.createElement("button");
+      button.innerText = choice.text;
+      button.classList.add("choice");
+      if (choice.correct) {
+        button.dataset.correct = choice.correct;
       }
+      button.addEventListener('click', selectAnswer);
+      answerChoices.appendChild(button);
+    });
+  }  
 
 
-  function selectAnswer() {
+  function selectAnswer(e) {
   
   }
 
   const questions = [
     {
       question: 'Which of the following is not a data type in JavaScript?',
-      answers: [
+      choices: [
         { text: '4', correct: true },
         { text: '22', correct: false }
       ]
