@@ -1,10 +1,11 @@
 
 const activateButton = document.getElementById("Start");
-const  nextButton = document.getElementById("Next");
+const nextQuestionButton = document.getElementById("Next");
 const quizQuestion = document.getElementById("question");
 const quizChoices = document.getElementById("choices");
 const questionDisplay = document.getElementById("question");
 const answerChoices = document.getElementById("choices");
+const container = document.querySelector(".container");
 
 let randomizedQuestions, currentQuestion
 
@@ -46,7 +47,7 @@ function startQuiz() {
   }  
 
   function clearQuizState() {
-    nextButton.classList.add("hide")
+    nextQuestionButton.classList.add("hide")
     while ( answerChoices.firstChild) {
       answerChoices.removeChild( answerChoices.firstChild)
     }
@@ -54,10 +55,40 @@ function startQuiz() {
 
 
 
+// Updates the status of an element based on whether the selected answer is correct or not
+  function updateElementStatus(myElement, isCorrect ) {
+    removeStatusClass(myElement)
+    if (isCorrect ) {
+      myElement.classList.add('correct')
+    } else {
+      myElement.classList.add('wrong')
+    }
+  }
+  
+  // Removes the status class from an element
+  function removeStatusClass(myElement) {
+    myElement.classList.remove('correct')
+    myElement.classList.remove('wrong')
+  }
+
+// Updates the status of the container and each answer button based on the correctness of the answer selected by the user
 
   function selectAnswer(e) {
-  
+    const chosenButton = e.target
+    const isCorrect  = chosenButton.dataset.correct
+    updateElementStatus(container, isCorrect )
+    Array.from( answerChoices.children).forEach(button =>{
+      updateElementStatus(button, button.dataset.correct)
+    })
+    if (shuffledQuestions.length > currentQuestion + 1) {
+      nextQuestionButton.classList.remove('hide')
+    } else {
+      activateButton .innerText = 'Restart'
+      nextQuestionButton.classList.remove('hide')
+    }
   }
+
+  
 
 
 
@@ -66,10 +97,10 @@ function startQuiz() {
 
   const questions = [
     {
-      question: 'Which of the following is not a data type in JavaScript?',
-      choices: [
-        { text: 'Boolean', correct: false },
-        { text: 'Number', correct: false },
+      question: 'What is 2 + 2?',
+       choices: [
+        { text: '4', correct: true },
+        { text: '22', correct: false }
       ]
     },
   ];
