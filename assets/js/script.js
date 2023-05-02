@@ -7,14 +7,19 @@ const questionDisplay = document.getElementById("question");
 const answerChoices = document.getElementById("choices");
 const container = document.querySelector(".container");
 const questionNumberElement = document.getElementById("question-number");
+const timerElement = document.getElementById("timer");
+const timerContainer= document.querySelector(".timer");
 
 
-let randomizedQuestions, currentQuestion, totalQuestions;
+let randomizedQuestions, currentQuestion, totalQuestions, countdown;
+let timeLeft =20;
 
 activateButton.addEventListener("click", startQuiz);
 nextQuestionButton.addEventListener('click', () => {
-  currentQuestion++
-  NextQuestion()
+  currentQuestion++;
+  clearInterval(countdown);
+  startTimer(timeLeft);
+  NextQuestion(); 
 })
 
 
@@ -30,6 +35,7 @@ function startQuiz() {
     questionNumberElement.classList.remove("hide");// Show the question number element by removing the "hide" class.
     updateQuestionNumber();
     NextQuestion() 
+    startTimer(20);
    
   }
   // Updates the displayed question number based on the current question and the total number of questions
@@ -46,6 +52,15 @@ function startQuiz() {
   }
  
 
+  function startTimer(time) {
+    /*let timeLeft = 20; // Set the initial time to 15 seconds */
+    countdown = setInterval(timer, 1000)
+    function timer () {
+      timerElement.textContent = time;
+      time--;
+    }
+  
+  }
 
 
   function showQuestion(question) {
@@ -91,6 +106,8 @@ function startQuiz() {
 // Updates the status of the container and each answer button based on the correctness of the answer selected by the user
 
   function selectAnswer(e) {
+    /*clearInterval(countdown);
+     startTimer(timeLeft);*/
     const chosenButton = e.target
     const isCorrect  = chosenButton.dataset.correct
     updateElementStatus(container, isCorrect )
@@ -108,8 +125,7 @@ function startQuiz() {
   }
 
   
-
-
+  
 
 
   
