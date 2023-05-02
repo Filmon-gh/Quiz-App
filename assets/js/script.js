@@ -9,10 +9,15 @@ const container = document.querySelector(".container");
 const questionNumberElement = document.getElementById("question-number");
 const timerElement = document.getElementById("timer");
 const timerContainer= document.querySelector(".timer");
+const resultBox =document.querySelector(".Result_box");
+const containerBox =document.querySelector(".container");
 
+const restartQuiz= document.querySelector(".restart");
+const quitQuiz= document.querySelector(".quit");
 
 let randomizedQuestions, currentQuestion, totalQuestions, countdown;
 let timeLeft =20;
+let userscore=0;
 
 activateButton.addEventListener("click", startQuiz);
 nextQuestionButton.addEventListener('click', () => {
@@ -27,6 +32,7 @@ nextQuestionButton.addEventListener('click', () => {
 function startQuiz() {
     console.log("started")
     activateButton.classList.add("hide");
+    resultBox.classList.add("hide")
     quizQuestion.classList.remove("hide");
     quizChoices.classList.remove("hide"); 
     randomizedQuestions = questions.sort(() => Math.random() - .5);
@@ -53,7 +59,6 @@ function startQuiz() {
  
 
   function startTimer(time) {
-    /*let timeLeft = 20; // Set the initial time to 15 seconds */
     countdown = setInterval(timer, 1000)
     function timer () {
       timerElement.textContent = time;
@@ -95,11 +100,16 @@ function startQuiz() {
 
 
 
+
+
 // Updates the status of an element based on whether the selected answer is correct or not
   function updateElementStatus(myElement, isCorrect ) {
     removeStatusClass(myElement)
     if (isCorrect ) {
       myElement.classList.add("correct")
+      userscore+=1;
+      console.log(userscore);
+
     } else {
       myElement.classList.add("wrong")
     }
@@ -123,16 +133,22 @@ function startQuiz() {
       updateElementStatus(button, button.dataset.correct)
     })
    
-
     if (randomizedQuestions.length > currentQuestion + 1) {
       nextQuestionButton.classList.remove("hide")
     } else {
-      activateButton .innerText = "Restart"
-      activateButton.classList.remove("hide")
+    
+     /* activateButton .innerText = "Restart"
+      activateButton.classList.remove("hide") */
+      showresultBox();
     }
   }
 
-  
+  function showresultBox(){
+    quizQuestion.classList.add("hide");
+    quizChoices.classList.add("hide")
+    containerBox.classList.add("hide")
+    resultBox.classList.remove("hide")
+  }
   
 
 
