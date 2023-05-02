@@ -58,6 +58,14 @@ function startQuiz() {
     function timer () {
       timerElement.textContent = time;
       time--;
+      if(time <0) { 
+        clearInterval(countdown);
+        timerElement.textContent = "00";
+      }
+      if(time <9 && time >= 0 ) { 
+        let padzero=timerElement.textContent ;
+        timerElement.textContent="0" + padzero;
+      }
     }
   
   }
