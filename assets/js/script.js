@@ -12,8 +12,6 @@ const timerContainer= document.querySelector(".timer");
 const resultBox =document.querySelector(".Result_box");
 const containerBox =document.querySelector(".container");
 const scoreResult =document.querySelector(".score_text");
-
-
 const restartQuiz= document.querySelector(".restart");
 
 
@@ -21,7 +19,7 @@ let randomizedQuestions, currentQuestion, totalQuestions, countdown;
 let timeLeft =20;
 let score=0;
 
-
+// Add event listener to startButton and call startQuiz function
 activateButton.addEventListener("click", startQuiz);
 nextQuestionButton.addEventListener('click', () => {
   currentQuestion++;
@@ -30,11 +28,21 @@ nextQuestionButton.addEventListener('click', () => {
   NextQuestion(); 
 })
 
+// Add event listener to restartQuiz button to reload the page on click
 restartQuiz.onclick = () => {
-  window.location.reload();
+window.location.reload();
 }
 
 
+// Function to show the next question and update the question number. It clears the current quiz state first.
+function NextQuestion() {
+  clearQuizState()
+  showQuestion(randomizedQuestions[currentQuestion])
+  updateQuestionNumber();
+
+}
+
+// Function to start the quiz by setting up the initial quiz state, randomizing the questions, and calling the NextQuestion function to display the first question
 function startQuiz() {
     console.log("started")
     activateButton.classList.add("hide");
@@ -54,34 +62,7 @@ function startQuiz() {
   function updateQuestionNumber() {
     questionNumberElement.innerText = `${currentQuestion + 1}/${totalQuestions}`;
   }
-
-
-
-  function NextQuestion() {
-    clearQuizState()
-    showQuestion(randomizedQuestions[currentQuestion])
-    updateQuestionNumber();
-  }
- 
-
-  function startTimer(time) {
-    countdown = setInterval(timer, 1000)
-    function timer () {
-      timerElement.textContent = time;
-      time--;
-      if(time <0) { 
-        clearInterval(countdown);
-        timerElement.textContent = "00";
-      }
-      if(time <9 && time >= 0 ) { 
-        let padzero=timerElement.textContent ;
-        timerElement.textContent="0" + padzero;
-      }
-    }
-  
-  }
-
-
+  // Function to display the current question and its answer choices. It creates a button for each answer choice and adds a click event listener to each button to call the selectAnswer function.
   function showQuestion(question) {
     questionDisplay.innerText = question.question;
     question.choices.forEach(choice => {
@@ -97,7 +78,7 @@ function startQuiz() {
       
     });
   }  
-
+ // Function to clear the current quiz state by removing the status class from the container, hiding the nextQuestionButton, and removing all answer choices.
   function clearQuizState() {
     removeStatusClass(document.querySelector('.container'))
     nextQuestionButton.classList.add("hide")
@@ -106,17 +87,11 @@ function startQuiz() {
     }
   }
 
-
-
-
-
 // Updates the status of an element based on whether the selected answer is correct or not
   function updateElementStatus(myElement, isCorrect ) {
     removeStatusClass(myElement)
     if (isCorrect ) {
       myElement.classList.add("correct")
-     
-
     } else {
       myElement.classList.add("wrong")
     }
@@ -128,20 +103,11 @@ function startQuiz() {
     myElement.classList.remove("wrong")
   }
 
-
-
-
-
-
-
-
-
-
 // Updates the status of the container and each answer button based on the correctness of the answer selected by the user
 
   function selectAnswer(e) {
     /*clearInterval(countdown);
-     startTimer(timeLeft);*/
+     startTimer(timeLeft); */
     const chosenButton = e.target
     const isCorrect  = chosenButton.dataset.correct
     updateElementStatus(container, isCorrect )
@@ -153,7 +119,6 @@ function startQuiz() {
       score++
       console.log(score)
     }
-      
     if (randomizedQuestions.length > currentQuestion + 1) {
       nextQuestionButton.classList.remove("hide")
     } else {
@@ -165,24 +130,39 @@ function startQuiz() {
     }
   }
   
-
- 
-  
+  // Function to start the countdown timer for the quiz, decrementing the time by one second until it reaches zero or the next question is shown. It also adds a leading zero to the timer element when the time is less than 10
+  function startTimer(time) {
+    countdown = setInterval(timer, 1000)
+    function timer () {
+      timerElement.textContent = time;
+      time--;
+      if(time <9 && time >= 0 ) { 
+        let padzero=timerElement.textContent ;
+        timerElement.textContent="0" + padzero;
+      }
+      else if(time <0) { 
+        clearInterval(countdown);
+        timerElement.textContent = "00";
+      }
+      else if(time === -1) { 
+            NextQuestion(); 
+            clearInterval(countdown);
+            startTimer(20);
+    }
+  }
+}
 // This function hides the quiz question, choices, and container boxes and displays the result box
   function showresultBox(){
     quizQuestion.classList.add("hide");
     quizChoices.classList.add("hide")
     containerBox.classList.add("hide")
     resultBox.classList.remove("hide")
-
-    
-
-    if (score > 3) {
+    if (score > 6) {
       let scoreElement = "<span>congrats!, you got <p> "+ score + "</p> out of<p>" + randomizedQuestions.length+ "</p> </span>"
       scoreResult.innerHTML=scoreElement ;
     }
 
-    else if (score >2) {
+    else if (score >4) {
       let scoreElement = "<span>nice!, you got <p> "+ score + "</p> out of<p>" + randomizedQuestions.length+ "</p> </span>"
       scoreResult.innerHTML=scoreElement ;
     }
@@ -194,43 +174,73 @@ function startQuiz() {
     
   }
 
-
+ // Array of objects containing quiz questions and choices for HTML, CSS, and JavaScript topics.
 
   const questions = [
     {
-      question: 'What is 2 + 2?',
-       choices: [
-        { text: '4', correct: true },
-        { text: '22', incorrect: false }
+      question: 'What does HTML stand for ?',
+      choices: [
+        { text: 'HyperText Markup Language', correct: true },
+        { text: 'HyperText Meta Language', incorrect: false },
+        { text: 'HyperText Media Language', incorrect: false },
+        { text: 'HyperText Management Language', incorrect: false }
+        ]
+    },
+    {
+      question: 'What is the purpose of CSS?',
+      choices: [
+        { text: 'To add interactivity to a website', incorrect: false },
+        { text: 'To create dynamic web pages', incorrect: false },
+        { text: 'To style and visually enhance the layout of a website', correct: true },
+        { text: 'To handle the back-end functionality of a website', incorrect: false }
+        ]
+    },
+    {
+      question: 'What is the purpose of JavaScript?',
+      choices: [
+        { text: 'To create the structure and layout of a website', incorrect: false },
+        { text: 'To add styling and visual effects to a website', incorrect: false },
+        { text: 'To add interactivity and functionality to a website', correct: true },
+        { text: 'To manage and store data for a website', incorrect: false }
+        ]
+    },
+    {
+      question: 'What is the box model in CSS?',
+      choices: [
+        { text: 'A model for creating 3D shapes in CSS', incorrect: false },
+        { text: 'A model for organizing and displaying content on a web page', incorrect: false },
+        { text: 'A model for calculating the size and position of elements on a web page', correct: true },
+        { text: 'A model for creating rounded corners on boxes in CSS', incorrect: false }
+        ]
+    },
+    {
+      question: 'What is the purpose of the <head> tag in HTML?',
+      choices: [
+        { text: 'To define the main content of the web page', incorrect: false },
+        { text: 'To define the footer of the web page', incorrect: false },
+        { text: 'To define the header of the web page', incorrect: false },
+        { text: 'To include metadata, such as the page title and links to external resources', correct: true }
       ]
     },
     {
-      question: 'What is the result of 3 + 2 + "7" in JavaScript?',
+      question: 'What is the difference between == and === in JavaScript?',
       choices: [
-        { text: '12', incorrect: false },
-        { text: '327', correct: true },
-        { text: 'NaN', incorrect: false },
-        { text: 'Undefined', incorrect: false }
-      ]
+        { text: '== compares the values of two variables while === compares both the value and the type of the variables', correct: true },
+        { text: '== compares the types of two variables while === compares the values of the variables', incorrect: false },
+        { text: '== and === are the same thing', incorrect: false },
+        { text: '== and === are not used in JavaScript', incorrect: false }
+        ]
     },
     {
-      question: 'What is the output of the following code in JavaScript: console.log(1 + +"2" + 3 + "4")',
+      question: 'What is the purpose of the <script> tag in HTML?',
       choices: [
-        { text: '1234', incorrect: false },
-        { text: '10NaN', incorrect: false },
-        { text: '16', correct: true },
-        { text: 'NaN', incorrect: false }
-      ]
+        { text: 'To define the structure and layout of the web page', incorrect: false },
+        { text: 'To define the content of the web page', incorrect: false },
+        { text: 'To link to external stylesheets and other resources', incorrect: false },
+        { text: 'To include JavaScript code in the web page', correct: true }
+        ]
     },
-    {
-      question: 'What is the value of the variable x after the following code in JavaScript: let x = 5; x += "2";',
-      choices: [
-        { text: '52', correct: true },
-        { text: '7', incorrect: false },
-        { text: 'NaN', incorrect: false },
-        { text: 'Undefined', incorrect: false }
-      ]
-    },
+
   ];
   
   
