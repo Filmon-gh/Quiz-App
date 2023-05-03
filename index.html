@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
       <!-- font owesome and Google font -->
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">  
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,34 +10,46 @@
       <title>Document</title>
 </head>
 <body>
-    </div id="container">
+    <div class="container">
      <header>
-        <div id="title">
-            <h1>Quiz</h1>      
+        <div id="title" >
+            <h1>Code-Class Quiz</h1>      
          </div>  
-         <div id="timer">
-            <div class="Time_content">Time left</div>
-            <div class="Time_sec">15</div>
+         <div id="time-container">
+            <div class="timer">Time remaining:</div>
+            <div id="timer">20</div>
          </div>
      </header> 
      <hr>
-    <div id="question">question
+    <div id="question" class="hide">question
     </div>
-		<div id="choices">
-			<button id="choice1"></button>
-			<button id="choice2"></button>
-			<button id="choice3"></button>
-			<button id="choice4"></button>
+		<div id="choices" class="hide">
+			<button class="choice">choice1</button>
+			<button class="choice">choice1</button>
+			<button class="choice">choice1</button>
+			<button class="choice">choice1</button>
 		</div>
         <hr>	
-
-        <button id="Start">Start</button>
-        <button id="Next" class="hide">Next</button>
-	</div>
+        <div>
+            <button id="Start">start-quiz</button>
+            <button id="Next" class="hide">Next</button>     
+        </div>
      <footer>
-        <p id="progress">Question x of y</p>
+        <p id="question-number" class="hide">question of x/y</p>
      </footer> 
-    
-    <script src="script.js"></script>
+    </div>
+
+    <div class="Result_box hide">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">you have completed the quiz</div>
+        <div class="score_text">    
+    </div>
+        <div>
+            <button class="restart">Replay Quiz</button>    
+        </div>
+    </div> 
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
