@@ -12,7 +12,6 @@
 /* Style the container box for the quiz app */
   .container{
     --hue: var(--hue-neutral);
-    height: 500px;
     width: 800px;
     max-width: 80%;
     padding: 15px;
@@ -34,7 +33,7 @@
   }
 
   .container header {
-    height: 60px; 
+     
     padding: 20px;
     border-radius: 10px;
     border: 2px solid #333;
@@ -50,8 +49,9 @@
   .container #title h1 {
     font-size: 50px;
     font-weight: 400;
-    
+    color: #0d0811;
   }
+
 
   .container header #time-container{
     height: 50px;
@@ -63,6 +63,7 @@
     padding: 0 15px;
     border-radius: 10px;
     border: 2px solid #333;
+    font-weight: bold;
     
   }
 
@@ -88,24 +89,17 @@
 
   }
 
-
-  /*
-  #title h1 {
-    font-family: Arial, sans-serif;
-    font-size: 50px;
-    background-color: #f2f2f2;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: 2px solid #333;
-    text-align: center;
-    color: #333;
-  }
-*/
   #question {
-    color: #333;
+    color: #f3ecec;
     font-family: Arial, sans-serif;
-    font-size: 36px;
+    font-size: 30px;
     
+  }
+
+  #question-number {
+    color: #e66767;
+    font-size: 30px;
+    font-weight: bold;
   }
 
   #choices {
@@ -120,13 +114,11 @@
 
   }
 
- 
-
   .choice {
     --hue: var(--hue-neutral);
     background-color: hsl(var(--hue), 100%, 50%);
     font-size: 18px;
-    color: #333;
+    color: #0c0c0c;
     padding: 5px  10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -150,13 +142,102 @@
     font-size: 18px;    
   }
   
-  #start #next {
+  
+  #Start {
+    color: #333;
+    font-size: 35px;
+    font-weight: bold; 
+    margin-top: 100px;
+  }
+
+  #Start:hover {
+    color: #cc6262;
+    
+  }
+
+   #next {
     color: #333;
     font-size: 18px;
     font-weight: 400;   
   }
 
+
+
   .hide {
     display: none;    
   }
   
+  .Result_box {
+    margin: auto;
+    width: 400px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #e5e8ec;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    
+  }
+  .Result_box .icon {
+    color: #4299d3;
+    font-size: 90px;
+   margin-bottom: 20px;
+
+  }
+
+  .Result_box .complete_text {
+    font-size: 19px;
+    font-weight: 500; 
+  }
+
+  .Result_box .score_text  {
+    display: flex;
+    margin: 10px;
+    font-size: 19px;
+    font-weight: 500;
+  }
+
+   .score_text {
+    font-weight: 500;
+    padding: 0 5px;
+  }
+
+  .Result_box .button {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+
+  }
+
+  .hide {
+    display: none;    
+  }
+
+
+
+  @media (max-width: 900px) {
+    /* Styles for header when screen size is 900px or less */
+    header {
+      flex-direction: column;
+      
+    }
+    #title {
+      font-size: 18px;
+        
+  }
+
+
+    #time-container {
+      margin-top: 1rem;
+      margin-right: 0;
+    }
+  }
