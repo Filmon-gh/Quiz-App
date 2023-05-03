@@ -141,12 +141,16 @@ function startQuiz() {
       else if(time <0) { 
         clearInterval(countdown);
         timerElement.textContent = "00";
+        NextQuestion(); 
+      clearInterval(countdown);
+      startTimer(20);
       }
-      else if(time === -1) { 
+      /*else if(time === -1) { 
             NextQuestion(); 
             clearInterval(countdown);
             startTimer(20);
     }
+    */
   }
 }
 
@@ -189,64 +193,64 @@ restartQuiz.onclick = () => {
     {
       question: 'What does HTML stand for ?',
       choices: [
-        { text: 'HyperText Markup Language', correct: true },
-        { text: 'HyperText Meta Language', incorrect: false },
-        { text: 'HyperText Media Language', incorrect: false },
-        { text: 'HyperText Management Language', incorrect: false }
+        { text: 'A) HyperText Markup Language', correct: true },
+        { text: 'B) HyperText Meta Language', incorrect: false },
+        { text: 'C) HyperText Media Language', incorrect: false },
+        { text: 'D) HyperText Management Language', incorrect: false }
         ]
     },
     {
       question: 'What is the purpose of CSS?',
       choices: [
-        { text: 'To add interactivity to a website', incorrect: false },
-        { text: 'To create dynamic web pages', incorrect: false },
-        { text: 'To style and visually enhance the layout of a website', correct: true },
-        { text: 'To handle the back-end functionality of a website', incorrect: false }
+        { text: 'A) To add interactivity to a website', incorrect: false },
+        { text: 'B) To create dynamic web pages', incorrect: false },
+        { text: 'C) To style and visually enhance the layout of a website', correct: true },
+        { text: 'D) To handle the back-end functionality of a website', incorrect: false }
         ]
     },
     {
       question: 'What is the purpose of JavaScript?',
       choices: [
-        { text: 'To create the structure and layout of a website', incorrect: false },
-        { text: 'To add styling and visual effects to a website', incorrect: false },
-        { text: 'To add interactivity and functionality to a website', correct: true },
-        { text: 'To manage and store data for a website', incorrect: false }
+        { text: 'A) To create the structure and layout of a website', incorrect: false },
+        { text: 'B) To add styling and visual effects to a website', incorrect: false },
+        { text: 'C) To add interactivity and functionality to a website', correct: true },
+        { text: 'D) To manage and store data for a website', incorrect: false }
         ]
     },
     {
       question: 'What is the box model in CSS?',
       choices: [
-        { text: 'A model for creating 3D shapes in CSS', incorrect: false },
-        { text: 'A model for organizing and displaying content on a web page', incorrect: false },
-        { text: 'A model for calculating the size and position of elements on a web page', correct: true },
-        { text: 'A model for creating rounded corners on boxes in CSS', incorrect: false }
+        { text: 'A) A model for creating 3D shapes in CSS', incorrect: false },
+        { text: 'B) A model for organizing and displaying content on a web page', incorrect: false },
+        { text: 'C) A model for calculating the size and position of elements on a web page', correct: true },
+        { text: 'D) A model for creating rounded corners on boxes in CSS', incorrect: false }
         ]
     },
     {
       question: 'What is the purpose of the <head> tag in HTML?',
       choices: [
-        { text: 'To define the main content of the web page', incorrect: false },
-        { text: 'To define the footer of the web page', incorrect: false },
-        { text: 'To define the header of the web page', incorrect: false },
-        { text: 'To include metadata, such as the page title and links to external resources', correct: true }
+        { text: 'A) To define the main content of the web page', incorrect: false },
+        { text: 'B) To define the footer of the web page', incorrect: false },
+        { text: 'C) To define the header of the web page', incorrect: false },
+        { text: 'D) To include metadata, such as the page title and links to external resources', correct: true }
       ]
     },
     {
       question: 'What is the difference between == and === in JavaScript?',
       choices: [
-        { text: '== compares the values of two variables while === compares both the value and the type of the variables', correct: true },
-        { text: '== compares the types of two variables while === compares the values of the variables', incorrect: false },
-        { text: '== and === are the same thing', incorrect: false },
-        { text: '== and === are not used in JavaScript', incorrect: false }
+        { text: 'A) == compares the values of two variables while === compares both the value and the type of the variables', correct: true },
+        { text: 'B) == compares the types of two variables while === compares the values of the variables', incorrect: false },
+        { text: 'C) == and === are the same thing', incorrect: false },
+        { text: 'D) == and === are not used in JavaScript', incorrect: false }
         ]
     },
     {
       question: 'What is the purpose of the <script> tag in HTML?',
       choices: [
-        { text: 'To define the structure and layout of the web page', incorrect: false },
-        { text: 'To define the content of the web page', incorrect: false },
-        { text: 'To link to external stylesheets and other resources', incorrect: false },
-        { text: 'To include JavaScript code in the web page', correct: true }
+        { text: 'A) To define the structure and layout of the web page', incorrect: false },
+        { text: 'B) To define the content of the web page', incorrect: false },
+        { text: 'C) To link to external stylesheets and other resources', incorrect: false },
+        { text: 'D) To include JavaScript code in the web page', correct: true }
         ]
     },
 
