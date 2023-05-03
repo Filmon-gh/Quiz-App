@@ -11,13 +11,16 @@ const timerElement = document.getElementById("timer");
 const timerContainer= document.querySelector(".timer");
 const resultBox =document.querySelector(".Result_box");
 const containerBox =document.querySelector(".container");
+const scoreResult =document.querySelector(".score_text");
+
 
 const restartQuiz= document.querySelector(".restart");
-const quitQuiz= document.querySelector(".quit");
+
 
 let randomizedQuestions, currentQuestion, totalQuestions, countdown;
 let timeLeft =20;
-let userscore=0;
+let score=0;
+
 
 activateButton.addEventListener("click", startQuiz);
 nextQuestionButton.addEventListener('click', () => {
@@ -27,6 +30,9 @@ nextQuestionButton.addEventListener('click', () => {
   NextQuestion(); 
 })
 
+restartQuiz.onclick = () => {
+  window.location.reload();
+}
 
 
 function startQuiz() {
@@ -84,9 +90,11 @@ function startQuiz() {
       button.classList.add("choice");
       if (choice.correct) {
         button.dataset.correct = choice.correct;
+    
       }
       button.addEventListener('click', selectAnswer);
       answerChoices.appendChild(button);
+      
     });
   }  
 
@@ -107,8 +115,7 @@ function startQuiz() {
     removeStatusClass(myElement)
     if (isCorrect ) {
       myElement.classList.add("correct")
-      userscore+=1;
-      console.log(userscore);
+     
 
     } else {
       myElement.classList.add("wrong")
@@ -121,6 +128,15 @@ function startQuiz() {
     myElement.classList.remove("wrong")
   }
 
+
+
+
+
+
+
+
+
+
 // Updates the status of the container and each answer button based on the correctness of the answer selected by the user
 
   function selectAnswer(e) {
@@ -132,7 +148,12 @@ function startQuiz() {
     Array.from( answerChoices.children).forEach(button =>{
       updateElementStatus(button, button.dataset.correct)
     })
-   
+
+    if (isCorrect === 'true') {
+      score++
+      console.log(score)
+    }
+      
     if (randomizedQuestions.length > currentQuestion + 1) {
       nextQuestionButton.classList.remove("hide")
     } else {
@@ -140,53 +161,74 @@ function startQuiz() {
      /* activateButton .innerText = "Restart"
       activateButton.classList.remove("hide") */
       showresultBox();
+    
     }
   }
+  
 
+ 
+  
+// This function hides the quiz question, choices, and container boxes and displays the result box
   function showresultBox(){
     quizQuestion.classList.add("hide");
     quizChoices.classList.add("hide")
     containerBox.classList.add("hide")
     resultBox.classList.remove("hide")
+
+    
+
+    if (score > 3) {
+      let scoreElement = "<span>congrats!, you got <p> "+ score + "</p> out of<p>" + randomizedQuestions.length+ "</p> </span>"
+      scoreResult.innerHTML=scoreElement ;
+    }
+
+    else if (score >2) {
+      let scoreElement = "<span>nice!, you got <p> "+ score + "</p> out of<p>" + randomizedQuestions.length+ "</p> </span>"
+      scoreResult.innerHTML=scoreElement ;
+    }
+
+    else {
+      let scoreElement = "<span>and sorry, you got only<p> "+ score + "</p> out of<p>" + randomizedQuestions.length+ "</p> </span>"
+      scoreResult.innerHTML=scoreElement ;
+    }
+    
   }
-  
 
 
-  
 
   const questions = [
     {
       question: 'What is 2 + 2?',
        choices: [
         { text: '4', correct: true },
-        { text: '22', correct: false }
+        { text: '22', incorrect: false }
       ]
     },
     {
       question: 'What is the result of 3 + 2 + "7" in JavaScript?',
       choices: [
-        { text: '12', correct: false },
+        { text: '12', incorrect: false },
         { text: '327', correct: true },
-        { text: 'NaN', correct: false },
-        { text: 'Undefined', correct: false }
+        { text: 'NaN', incorrect: false },
+        { text: 'Undefined', incorrect: false }
       ]
     },
     {
       question: 'What is the output of the following code in JavaScript: console.log(1 + +"2" + 3 + "4")',
       choices: [
-        { text: '1234', correct: false },
-        { text: '10NaN', correct: false },
+        { text: '1234', incorrect: false },
+        { text: '10NaN', incorrect: false },
         { text: '16', correct: true },
-        { text: 'NaN', correct: false }
+        { text: 'NaN', incorrect: false }
       ]
     },
     {
       question: 'What is the value of the variable x after the following code in JavaScript: let x = 5; x += "2";',
       choices: [
         { text: '52', correct: true },
-        { text: '7', correct: false },
-        { text: 'NaN', correct: false },
-        { text: 'Undefined', correct: false }
+        { text: '7', incorrect: false },
+        { text: 'NaN', incorrect: false },
+        { text: 'Undefined', incorrect: false }
       ]
     },
   ];
