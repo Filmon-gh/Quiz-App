@@ -28,11 +28,6 @@ nextQuestionButton.addEventListener('click', () => {
   NextQuestion(); 
 })
 
-// Add event listener to restartQuiz button to reload the page on click
-restartQuiz.onclick = () => {
-window.location.reload();
-}
-
 
 // Function to show the next question and update the question number. It clears the current quiz state first.
 function NextQuestion() {
@@ -87,21 +82,7 @@ function startQuiz() {
     }
   }
 
-// Updates the status of an element based on whether the selected answer is correct or not
-  function updateElementStatus(myElement, isCorrect ) {
-    removeStatusClass(myElement)
-    if (isCorrect ) {
-      myElement.classList.add("correct")
-    } else {
-      myElement.classList.add("wrong")
-    }
-  }
-  
-  // Removes the status class from an element
-  function removeStatusClass(myElement) {
-    myElement.classList.remove("correct")
-    myElement.classList.remove("wrong")
-  }
+
 
 // Updates the status of the container and each answer button based on the correctness of the answer selected by the user
 
@@ -129,7 +110,24 @@ function startQuiz() {
     
     }
   }
+
+  // Updates the status of an element based on whether the selected answer is correct or not
+  function updateElementStatus(myElement, isCorrect ) {
+    removeStatusClass(myElement)
+    if (isCorrect ) {
+      myElement.classList.add("correct")
+    } else {
+      myElement.classList.add("wrong")
+    }
+  }
   
+  // Removes the status class from an element
+  function removeStatusClass(myElement) {
+    myElement.classList.remove("correct")
+    myElement.classList.remove("wrong")
+  }
+  
+
   // Function to start the countdown timer for the quiz, decrementing the time by one second until it reaches zero or the next question is shown. It also adds a leading zero to the timer element when the time is less than 10
   function startTimer(time) {
     countdown = setInterval(timer, 1000)
@@ -151,18 +149,21 @@ function startQuiz() {
     }
   }
 }
+
+
+
 // This function hides the quiz question, choices, and container boxes and displays the result box
   function showresultBox(){
     quizQuestion.classList.add("hide");
     quizChoices.classList.add("hide")
     containerBox.classList.add("hide")
     resultBox.classList.remove("hide")
-    if (score > 6) {
+    if (score > 5) {
       let scoreElement = "<span>congrats!, you got <p> "+ score + "</p> out of<p>" + randomizedQuestions.length+ "</p> </span>"
       scoreResult.innerHTML=scoreElement ;
     }
 
-    else if (score >4) {
+    else if (score >3) {
       let scoreElement = "<span>nice!, you got <p> "+ score + "</p> out of<p>" + randomizedQuestions.length+ "</p> </span>"
       scoreResult.innerHTML=scoreElement ;
     }
@@ -173,6 +174,14 @@ function startQuiz() {
     }
     
   }
+
+  // Add event listener to restartQuiz button to reload the page on click
+restartQuiz.onclick = () => {
+  window.location.reload();
+  }
+  
+  
+
 
  // Array of objects containing quiz questions and choices for HTML, CSS, and JavaScript topics.
 
