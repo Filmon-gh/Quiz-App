@@ -106,6 +106,9 @@ Array.from(document.getElementsByClassName('choice')).forEach(e => {e.disabled =
 ## Validator Testing
  - HTML : After running the code through the official W3C validator, no errors were found.
  - CSS : After running the code through the official (Jigsaw) Validator, no errors were found.
+ -JS hint checker
+
+ <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/69f5d5c97ac31a2579b0c3cd94795b0fbb104708/jshint.JPG"/>
  
  Accessibility: By running the project through Lighthouse, I have confirmed that the chosen colors and font size 
  are easy to read and accessible.
