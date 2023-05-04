@@ -34,7 +34,7 @@ The user story for the development of the Delicious-Den website has been crafted
 
 ## Quiz-App area and Question area
 
-![App Screenshot]()
+![App Screenshot](https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/questionpage.JPG)
 
 - The quiz question area is located below the main header  providing a  structured presentation of the quiz content. The question area is designed to showcase the question number and the question itself, along with the answer choices presented in A, B, C, and D format. for easy comprehension. 
 - The answer choices have interactive displays, highlighting the choice as the user moves the cursor towards it to indicate that the user is in the choice section of the quiz area. Additionally, the question number is also presented in the footer section, incrementing respectively as the number of questions covered increases, to keep the user informed about their progress.
@@ -46,15 +46,15 @@ The user story for the development of the Delicious-Den website has been crafted
 The figure below demonstrates how the quiz app interacts with the user when they select the right or wrong answer. When the user selects the wrong answer, the entire quiz app container area is highlighted with a red background color. 
 - When the user selects the correct answer in the quiz app, the answer button is highlighted with a green background, indicating the correct choice. This feature helps users monitor their performance and provides immediate feedback on their answer selection.
 
-![App Screenshot]()
-
+![App Screenshot](https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/rightanswerpage.JPG)
+![App Screenshot](https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Answerselect.JPG)
 
 ## Feed back and score result
 
 After the user completes all the quiz questions, the quiz app presents a score result. 
 
 - The score result displays a congratulatory message if the user achieved a high score, a nice message if the score is average, and a sorry message if the score is low. The score result is a great way for the user to gauge their performance and assess their understanding of the quiz topic.
-
+![App Screenshot](https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/scoreresult.JPG)
 
 ## Features to be added in the future        
  -Allow users to save their progress and return to the quiz at a later time.
