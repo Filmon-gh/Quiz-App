@@ -5,7 +5,7 @@ Code Class Quiz: designed to help beginners learn the basics of HTML, CSS, and J
 
 One additional feature of the app is the shuffling of questions, which ensures that every time a user replays the quiz, the questions are arranged randomly and in a different order. This helps to keep the experience fresh and engaging for the user.Additionally, the app is designed to provide users with a real-time feedback experience, with green and red lights indicating correct and incorrect answers. At the end of the quiz, the user is presented with their result in a separate window, which includes their score
 
-<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Frontpage.JPG"  width="900" /> 
+<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/c9622315e491a4dec0c52be86078e01f539b34b0/Capture.JPG"  width="900" /> 
 
 ## User stories
 The user story for the development of the Delicious-Den website has been crafted to ensure that the website effectively meets the needs of its target audience. The following user stories have been identified: 
@@ -26,7 +26,7 @@ The user story for the development of the Delicious-Den website has been crafted
 
 ## Start-quiz 
 
-![App Screenshot]()
+<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Frontpage.JPG"  width="900" /> 
 
 - The start page of the quiz app features the name of the quiz app and a display area for the start of the quiz. At the bottom of the display area, users are presented with options to start quiz. Additionally, on the top-right section of the page, users can see a timer indicating the remaining time of 20 seconds for each question.
 - In the quiz app, the "start" function is responsible for initializing the quiz by displaying the first question and answer choices, while hiding the start button. 
