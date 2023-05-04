@@ -163,13 +163,7 @@ function startTimer(time) {
       timerElement.textContent = "00";
       NextQuestion(); 
     clearInterval(countdown);
-    }
-    /*else if(time === -1) { 
-          NextQuestion(); 
-          clearInterval(countdown);
-          startTimer(20);
-  }
-  */
+    }  
 }
 }  
 
