@@ -109,9 +109,11 @@ Array.from(document.getElementsByClassName('choice')).forEach(e => {e.disabled =
  
  Accessibility: By running the project through Lighthouse, I have confirmed that the chosen colors and font size 
  are easy to read and accessible.
- 
-  <img src=" https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/lighthouse.JPG"  width="500"/>
-  <img src=""/>
+   For Mobile Devices
+  <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/lighthouse.JPG"/>
+  
+  For Desktop 
+  <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/desktoplighthouse.JPG"/>
 
 
 ## Deployment 
