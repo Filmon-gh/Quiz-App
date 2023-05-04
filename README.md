@@ -45,7 +45,7 @@ The user story for the development of the Delicious-Den website has been crafted
 
 The figure below demonstrates how the quiz app interacts with the user when they select the right or wrong answer. When the user selects the wrong answer, the entire quiz app container area is highlighted with a red background color. 
 - When the user selects the correct answer in the quiz app, the answer button is highlighted with a green background, indicating the correct choice. This feature helps users monitor their performance and provides immediate feedback on their answer selection.
-<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/rightanswerpage.JPG"  width="900" /> 
+<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/rightanswerpage.JPG"  width="600" height="400" /> 
 
 ![App Screenshot](https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Answerselect.JPG)
 
