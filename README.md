@@ -3,12 +3,12 @@
 
 Code Class Quiz: designed to help beginners learn the basics of HTML, CSS, and JavaScript through a series of questions and answers.The app features an intuitive interface that allows the user to easily navigate through the quiz. The questions are displayed with corresponding numbers, and the time remaining for each question is shown, adding an element of urgency to the quiz-taking experience.
 
-One additional feature of the app is the shuffling of questions, which ensures that every time a user replays the quiz, the questions are arranged randomly and in a different order. This helps to keep the experience fresh and engaging for the user.Additionally, the app is designed to provide users with a real-time feedback experience, with green and red lights indicating correct and incorrect answers. At the end of the quiz, the user is presented with their result in a separate window, which includes their score
+One additional feature of the app is the shuffling of questions, which ensures that every time a user replays the quiz, the questions are arranged randomly and in a different order. This helps to keep the experience fresh and engaging for the user.Additionally, the app is designed to provide users with a real-time feedback experience, with green and red lights indicating correct and incorrect answers. At the end of the quiz, the user is presented with their result in a separate window, which includes their score.
 
-<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/c9622315e491a4dec0c52be86078e01f539b34b0/Capture.JPG"  width="900" /> 
+                                        <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/c9622315e491a4dec0c52be86078e01f539b34b0/Capture.JPG"  width="900" /> 
 
 ## User stories
-The user story for the development of the Delicious-Den website has been crafted to ensure that the website effectively meets the needs of its target audience. The following user stories have been identified: 
+ The following user stories have been identified for the development of the quiz app: 
 
 - As a beginner in web development, I want to practice my HTML, CSS, and JavaScript knowledge by taking a quiz.
 
@@ -16,7 +16,7 @@ The user story for the development of the Delicious-Den website has been crafted
 
 - I want the questions to be displayed clearly, with shuffled order to prevent memorization. 
 
-- After answering each question, I want to see  indication of whether my answer was correct or incorrect. 
+- After answering each question, I want to see a general indication of whether my answer was correct or incorrect. 
 
 -  At the end of the quiz, I want to see my final score displayed in a separate window. 
 
