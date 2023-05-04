@@ -5,7 +5,7 @@ Code Class Quiz: designed to help beginners learn the basics of HTML, CSS, and J
 
 One additional feature of the app is the shuffling of questions, which ensures that every time a user replays the quiz, the questions are arranged randomly and in a different order. This helps to keep the experience fresh and engaging for the user.Additionally, the app is designed to provide users with a real-time feedback experience, with green and red lights indicating correct and incorrect answers. At the end of the quiz, the user is presented with their result in a separate window, which includes their score.
 
-                                        <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/c9622315e491a4dec0c52be86078e01f539b34b0/Capture.JPG"  width="900" /> 
+ <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/c9622315e491a4dec0c52be86078e01f539b34b0/Capture.JPG"  width="900" /> 
 
 ## User stories
  The following user stories have been identified for the development of the quiz app: 
@@ -25,20 +25,20 @@ One additional feature of the app is the shuffling of questions, which ensures t
 # Features
 
 ## Start-quiz 
+- The quiz app's start page features the quiz app's name and a display area for the start of the quiz. At the bottom of the display area, users are presented with options to start the quiz. Additionally, on the top-right section of the page, users can see a timer indicating the remaining time of 20 seconds for each question.
+- In the quiz app, the "start" function is responsible for initializing the quiz by displaying the first question and answer choices, while hiding the start button.
 
-<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Frontpage.JPG"  width="900" /> 
-
-- The start page of the quiz app features the name of the quiz app and a display area for the start of the quiz. At the bottom of the display area, users are presented with options to start quiz. Additionally, on the top-right section of the page, users can see a timer indicating the remaining time of 20 seconds for each question.
-- In the quiz app, the "start" function is responsible for initializing the quiz by displaying the first question and answer choices, while hiding the start button. 
+<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Frontpage.JPG"  width="700" height="500" /> 
 
 
 ## Quiz-App area and Question area
 
-![App Screenshot](https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/questionpage.JPG)
-
 - The quiz question area is located below the main header  providing a  structured presentation of the quiz content. The question area is designed to showcase the question number and the question itself, along with the answer choices presented in A, B, C, and D format. for easy comprehension. 
 - The answer choices have interactive displays, highlighting the choice as the user moves the cursor towards it to indicate that the user is in the choice section of the quiz area. Additionally, the question number is also presented in the footer section, incrementing respectively as the number of questions covered increases, to keep the user informed about their progress.
-- The "next" function is responsible for transitioning to the next question and updating the display with the new question and answer choices. 
+- The "next" function is responsible for transitioning to the next question and updating the display with the new question and answer choices.
+
+<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/questionpage.JPG" width="700" height="500" /> 
+ 
 
 
 ## Answer selection
@@ -47,14 +47,16 @@ The figure below demonstrates how the quiz app interacts with the user when they
 - When the user selects the correct answer in the quiz app, the answer button is highlighted with a green background, indicating the correct choice. This feature helps users monitor their performance and provides immediate feedback on their answer selection.
 <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/rightanswerpage.JPG"  width="600" height="400" /> 
 
-![App Screenshot](https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Answerselect.JPG)
+<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Answerselect.JPG" width="600" height="400" /> 
+
 
 ## Feed back and score result
 
 After the user completes all the quiz questions, the quiz app presents a score result. 
-
 - The score result displays a congratulatory message if the user achieved a high score, a nice message if the score is average, and a sorry message if the score is low. The score result is a great way for the user to gauge their performance and assess their understanding of the quiz topic.
-![App Screenshot](https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/scoreresult.JPG)
+
+<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/scoreresult.JPG" width="320" height="250" />
+
 
 ## Features to be added in the future        
  -Allow users to save their progress and return to the quiz at a later time.
