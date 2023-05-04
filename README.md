@@ -20,19 +20,19 @@ One additional feature of the app is the shuffling of questions, which ensures t
 
  - As a user, I am seeking a quiz application that provides a platform for efficient and flexible practice sessions. I require an app that enables me to work at my own pace, allowing me to take as much time as I need to understand and respond to each question.
 
--  At the end of the quiz, I want to see my final score displayed in a separate window. 
+-  At the end of the quiz, I want to know my final score. 
 
 
 
 # Features
 
 ## Start-quiz 
-- The quiz app's start page features the quiz app's name and a display area for the start of the quiz. At the bottom of the display area, users are presented with options to start the quiz. Additionally, on the top-right section of the page, users can see a timer indicating the remaining time of 20 seconds for each question.
+- The quiz app's start page features the quiz app's name and a display area for the start of the quiz. At the bottom of the display area, users are presented with options to start the quiz. Additionally, on the top-right section of the page, users can see a timer.
 - In the quiz app, the "start" function is responsible for initializing the quiz by displaying the first question and answer choices, while hiding the start button.
 
 <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Frontpage.JPG"  width="700" height="500" /> 
 
-The time remaining feature is provided to aid users in adhering to the optimum time limit for each question, allowing for efficient practice sessions. Nevertheless, users are also free to take more time than indicated by the time remaining feature, as needed, to fully comprehend and assimilate the process
+The time remaining feature is provided to aid users in adhering to the optimum time limit for each question, allowing for efficient practice sessions. Nevertheless, users are also free to take more time than indicated by the time remaining feature, as needed, to fully comprehend and assimilate the process.
 ## Quiz-App area and Question area
 
 - The quiz question area is located below the main header  providing a  structured presentation of the quiz content. The question area is designed to showcase the question number and the question itself, along with the answer choices presented in A, B, C, and D format. for easy comprehension. 
@@ -61,12 +61,11 @@ After the user completes all the quiz questions, the quiz app presents a score r
 
 
 ## Features to be added in the future        
- -Allow users to save their progress and return to the quiz at a later time.
- -Implement a leaderboard to display the highest scores achieved by all users.
+ - Allow users to save their progress and return to the quiz at a later time.
  - Integrate social media sharing functionality to allow users to share their quiz results with their friends.
  - Implement a feature that enables users to review the questions and answers they got wrong at the end of the quiz.
  - Allow users to select their preferred difficulty level or category of questions.
- -Include multimedia elements, such as images or videos, to make the quiz more engaging.
+ - Include multimedia elements, such as images or videos, to make the quiz more engaging.
 
 ## Technology Used: 
 
@@ -108,16 +107,18 @@ Array.from(document.getElementsByClassName('choice')).forEach(e => {e.disabled =
 ## Validator Testing
  - HTML : After running the code through the official W3C validator, no errors were found.
  - CSS : After running the code through the official (Jigsaw) Validator, no errors were found.
- -JS hint checker
+ 
+ - JS hint checker
 
  <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/69f5d5c97ac31a2579b0c3cd94795b0fbb104708/jshint.JPG"/>
  
  Accessibility: By running the project through Lighthouse, I have confirmed that the chosen colors and font size 
  are easy to read and accessible.
-   For Mobile Devices
+ 
+  - For Mobile Devices
   <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/lighthouse.JPG"/>
   
-  For Desktop 
+ - For Desktop 
   <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/desktoplighthouse.JPG"/>
 
 
