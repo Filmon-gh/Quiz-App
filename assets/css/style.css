@@ -1,275 +1,248 @@
 
 body {
-    background-color: #3a89c156;
-    
-  }
-  
-
-/* Define global CSS variables for correct, wrong, and neutral colors*/
-:root {
-    --hue-correct: 145;
-    --hue-wrong: 0;
-    --hue-neutral: 200;
-  }
+  background-color:#3a89c156;
+}
+/* Define global CSS variables for correct,wrong,and neutral colors*/:root {
+  --hue-correct:145;
+  --hue-wrong:0;
+  --hue-neutral:200;
+}
 
 /* Style the container box for the quiz app */
-  .container{
-    --hue: var(--hue-neutral);
-    width: 800px;
-    max-width: 80%;
-    padding: 15px;
-    border-radius: 10px;
-    border: 2px solid #333;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    background-color: hsl(var(--hue), 100%, 20%);
-    margin:50px auto;/* Center the container box horizontally */
-    
-  }
+  .container {
+  --hue:var(--hue-neutral);
+  width:800px;
+  max-width:80%;
+  padding:15px;
+  border-radius:10px;
+  border:2px solid #333;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+  background-color:hsl(var(--hue),100%,20%);
+  margin:50px auto;
+  /* Center the container box horizontally */
+}
 
-  .header {
-    margin:0 auto;
-    font-size: 45px;
-    text-align: center;
-    margin-top: 150px;
+.header {
+  margin:0 auto;
+  font-size:45px;
+  text-align:center;
+  margin-top:150px;
+}
 
-  }
+.correct {
+  --hue:var(--hue-correct);
+}
 
+.wrong {
+  --hue:var(--hue-wrong);
+}
 
-  .correct {
-    --hue: var(--hue-correct);
-  }
+.container header {
+  padding:20px;
+  border-radius:10px;
+  border:2px solid #333;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+  background-color:#628ddd;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 25px;
+}
 
-  .wrong {
-    --hue: var(--hue-wrong);
+.container #title h1 {
+  font-size:50px;
+  font-weight:400;
+  color:#0d0811;
+}
 
-  }
+.container header #time-container {
+  height:50px;
+  width:150px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background-color:#e5e8ec;
+  padding:0 15px;
+  border-radius:10px;
+  border:2px solid #333;
+  font-weight:bold;
+}
 
-  .container header {
-     
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #333;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    background-color: #628ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 25px;
-    
-  }
+.container header .clock {
+  font-size:20px;
+  font-weight:450;
+  user-select:none;
+}
 
-  .container #title h1 {
-    font-size: 50px;
-    font-weight: 400;
-    color: #0d0811;
-  }
+.container header .countdown {
+  user-select:none;
+  background-color:#08182c;
+  border-radius:10px;
+  border:2px solid #333;
+  font-size:20px;
+  font-weight:450;
+  height:40px;
+  width:50px;
+  color:#ccc;
+  text-align:center;
+  line-height:40px;
+}
 
+#question {
+  color:#f3ecec;
+  font-family:Arial,sans-serif;
+  font-size:30px;
+  text-align:center;
+  margin-top:30px;
+}
 
-  .container header #time-container{
-    height: 50px;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #e5e8ec;
-    padding: 0 15px;
-    border-radius: 10px;
-    border: 2px solid #333;
-    font-weight: bold;
-    
-  }
+#question-number {
+  color:#e66767;
+  font-size:30px;
+  font-weight:bold;
+}
 
-  .container header .clock {
-    font-size: 20px;
-    font-weight: 450;
-    user-select: none;
-    
-  }
+#choices {
+  margin-top:30px;
+  margin-left:20%;
+  margin-right:20%;
+  margin-bottom:30px;
+}
 
-  .container header .countdown {
-    user-select: none;
-    background-color: #08182c;
-    border-radius: 10px;
-    border: 2px solid #333;
-    font-size: 20px;
-    font-weight: 450;
-    height: 40px;
-    width: 50px;
-    color: #ccc;
-    text-align: center;
-    line-height: 40px;
+.choices:hover {
+  color:#a4c236;
+}
 
-  }
+.choice {
+  --hue:var(--hue-neutral);
+  background-color:hsl(var(--hue),100%,50%);
+  font-size:18px;
+  color:#0c0c0c;
+  padding:5px  10px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  margin:10px;
+  display:flex;
+  flex-direction:column;
+  outline:none;
+}
 
-  #question {
-    color: #f3ecec;
-    font-family: Arial, sans-serif;
-    font-size: 30px;
-    text-align: center;
-    margin-top: 30px;
-    
-  }
+.choice:hover {
+  background-color:#dd9830;
+}
 
-  #question-number {
-    color: #e66767;
-    font-size: 30px;
-    font-weight: bold;
-  }
+.choice.correct {
+  --hue:var(--hue-correct);
+}
 
-  #choices {
-    
-    margin-top: 30px;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 30px;
+.choice.wrong {
+  --hue:var(--hue-wrong);
+}
 
-  }
+#progress {
+  color:#333;
+  font-size:18px;
+}
 
-  .choices:hover {
-    color: #a4c236;
+#Start {
+  color:#333;
+  font-size:35px;
+  font-weight:bold;
+  margin-top:100px;
+}
 
-  }
+#Start:hover {
+  background-color:#4fc221;
+}
 
-  .choice {
-    --hue: var(--hue-neutral);
-    background-color: hsl(var(--hue), 100%, 50%);
-    font-size: 18px;
-    color: #0c0c0c;
-    padding: 5px  10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    outline: none;
-  }
-  .choice:hover {
-    background-color: #dd9830;
-    
+#Next {
+  color:#333;
+  font-size:25px;
+  font-weight:bold;
+}
 
-  }
+#Next:hover {
+  background-color:#c0da2f;
+}
 
+.hide {
+  display:none;
+}
 
-  .choice.correct {
-    --hue: var(--hue-correct);
+.Result_box {
+  margin:auto;
+  width:400px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  justify-content:space-between;
+  background-color:#ebd725;
+  padding:20px 30px;
+  border-radius:10px;
+  border:2px solid #333;
+}
 
-  }
-  .choice.wrong {
-    --hue: var(--hue-wrong);
+.Result_box .icon {
+  color:#4299d3;
+  font-size:90px;
+  margin-bottom:20px;
+}
 
-  }
+.Result_box .complete_text {
+  font-size:19px;
+  font-weight:bold;
+}
 
-  #progress {
-    color: #333;
-    font-size: 18px;    
-  }
-  
-  
-  #Start {
-    color: #333;
-    font-size: 35px;
-    font-weight: bold; 
-    margin-top: 100px;
-  }
+.Result_box .score_text {
+  display:flex;
+  margin:10px;
+  font-size:19px;
+  font-weight:bold;
+}
 
-  #Start:hover {
-    color: #cc6262;
-    
-  }
+.score_text {
+  font-weight:500;
+  padding:0 5px;
+}
 
-   #next {
-    color: #333;
-    font-size: 30px;
-    font-weight: bold;  
-  }
+.Result_box .button {
+  display:flex;
+  flex-direction:column;
+  border-radius:10px;
+  padding:30px;
+  margin:20px 20px;
+  border:1px solid #ccc;
+  cursor:pointer;
+  transition:all 0.2s ease;
+}
 
+hr {
+  border:none;
+  border-top:5px solid rgb(176,223,48);
+}
 
+.hide {
+  display:none;
+}
 
-  .hide {
-    display: none;    
-  }
-  
-  .Result_box {
-    margin: auto;
-    width: 400px;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    background-color: #ebd725;
-    padding: 20px 30px;
-    border-radius: 10px;
-    border: 2px solid #333;
-    
-    
-  }
-  .Result_box .icon {
-    color: #4299d3;
-    font-size: 90px;
-   margin-bottom: 20px;
+#next {
+  color:#333;
+  font-size:30px;
+  font-weight:bold;
+}
 
-  }
-
-  .Result_box .complete_text {
-    font-size: 19px;
-    font-weight: bold; 
-  }
-
-  .Result_box .score_text  {
-    display: flex;
-    margin: 10px;
-    font-size: 19px;
-    font-weight: bold;
-  }
-
-   .score_text {
-    font-weight: 500;
-    padding: 0 5px;
-  }
-
-  .Result_box .button {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    padding: 30px;
-    margin: 20px 20px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    
-
-  }
-
-  hr {
-    
-    border: none;
-    border-top: 5px solid rgb(176, 223, 48);
-  }
-
-  .hide {
-    display: none;    
-  }
-  #next {
-    color: #333;
-    font-size: 30px;
-    font-weight: bold;  
-  }
-
-
-  @media (max-width: 900px) {
-    /* Styles for header when screen size is 900px or less */
+@media (max-width:900px) {
+  /* Styles for header when screen size is 900px or less */
     header {
-      flex-direction: column;
-      
-    }
-    #title {
-      font-size: 18px;
-        
-  }
-
-    #time-container {
-      margin-top: 1rem;
-      margin-right: 0;
-    }
-  }
+  flex-direction:column;
+}
+#title {
+  font-size:18px;
+  font-weight:bold;
+}
+#time-container {
+  margin-top:1rem;
+  margin-right:0;
+}
+}
