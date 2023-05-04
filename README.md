@@ -1,68 +1,71 @@
 
 #  Code-Class Quiz      
 
-Code Class Quiz: designed to help beginners learn the basics of HTML, CSS, and JavaScript through a series of questions and answers.The app features an intuitive interface that allows the user to easily navigate through the quiz. The questions are displayed with corresponding numbers, and the time remaining for each question is shown, adding an element of urgency to the quiz-taking experience.
+Code Class Quiz: designed to help beginners learn the basics of HTML, CSS, and JavaScript through a series of questions and answers.The app features an intuitive interface that allows the user to easily navigate through the quiz. The questions are displayed with corresponding numbers,and users are encouraged to allocate an appropriate amount of time for each question. While a predetermined time limit has been included as an optional feature, users have the flexibility to take as much time as they need to complete the quiz
 
-One additional feature of the app is the shuffling of questions, which ensures that every time a user replays the quiz, the questions are arranged randomly and in a different order. This helps to keep the experience fresh and engaging for the user.Additionally, the app is designed to provide users with a real-time feedback experience, with green and red lights indicating correct and incorrect answers. At the end of the quiz, the user is presented with their result in a separate window, which includes their score
+One additional feature of the app is the shuffling of questions, which ensures that every time a user replays the quiz, the questions are arranged randomly and in a different order. This helps to keep the experience fresh and engaging for the user.Additionally, the app is designed to provide users with a real-time feedback experience, with green and red lights indicating correct and incorrect answers. At the end of the quiz, the user is presented with their result in a separate window, which includes their score.
 
-<img src=""  width="900" /> 
+ <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/c9622315e491a4dec0c52be86078e01f539b34b0/Capture.JPG"  width="900" /> 
 
 ## User stories
-The user story for the development of the Delicious-Den website has been crafted to ensure that the website effectively meets the needs of its target audience. The following user stories have been identified: 
+ The following user stories have been identified for the development of the quiz app: 
 
 - As a beginner in web development, I want to practice my HTML, CSS, and JavaScript knowledge by taking a quiz.
 
--  I also want to be able to easily navigate through the quiz, with clear indication of which question I'm on and how much time I have remaining. 
+-  I also want to a user-friendly navigation system that provides clear indication of the current question I am answering while taking the quiz.
 
 - I want the questions to be displayed clearly, with shuffled order to prevent memorization. 
 
-- After answering each question, I want to see  indication of whether my answer was correct or incorrect. 
+- After answering each question, I want to see a general indication of whether my answer was correct or incorrect.
 
--  At the end of the quiz, I want to see my final score displayed in a separate window. 
+ - As a user, I am seeking a quiz application that provides a platform for efficient and flexible practice sessions. I require an app that enables me to work at my own pace, allowing me to take as much time as I need to understand and respond to each question.
+
+-  At the end of the quiz, I want to know my final score. 
 
 
 
 # Features
 
 ## Start-quiz 
+- The quiz app's start page features the quiz app's name and a display area for the start of the quiz. At the bottom of the display area, users are presented with options to start the quiz. Additionally, on the top-right section of the page, users can see a timer.
+- In the quiz app, the "start" function is responsible for initializing the quiz by displaying the first question and answer choices, while hiding the start button.
 
-![App Screenshot]()
+<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Frontpage.JPG"  width="700" height="500" /> 
 
-- The start page of the quiz app features the name of the quiz app and a display area for the start of the quiz. At the bottom of the display area, users are presented with options to start quiz. Additionally, on the top-right section of the page, users can see a timer indicating the remaining time of 20 seconds for each question.
-- In the quiz app, the "start" function is responsible for initializing the quiz by displaying the first question and answer choices, while hiding the start button. 
-
-
+The time remaining feature is provided to aid users in adhering to the optimum time limit for each question, allowing for efficient practice sessions. Nevertheless, users are also free to take more time than indicated by the time remaining feature, as needed, to fully comprehend and assimilate the process.
 ## Quiz-App area and Question area
-
-![App Screenshot]()
 
 - The quiz question area is located below the main header  providing a  structured presentation of the quiz content. The question area is designed to showcase the question number and the question itself, along with the answer choices presented in A, B, C, and D format. for easy comprehension. 
 - The answer choices have interactive displays, highlighting the choice as the user moves the cursor towards it to indicate that the user is in the choice section of the quiz area. Additionally, the question number is also presented in the footer section, incrementing respectively as the number of questions covered increases, to keep the user informed about their progress.
-- The "next" function is responsible for transitioning to the next question and updating the display with the new question and answer choices. 
+- The "next" function is responsible for transitioning to the next question and updating the display with the new question and answer choices.
+
+<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/questionpage.JPG" width="700" height="500" /> 
+ 
 
 
 ## Answer selection
 
 The figure below demonstrates how the quiz app interacts with the user when they select the right or wrong answer. When the user selects the wrong answer, the entire quiz app container area is highlighted with a red background color. 
 - When the user selects the correct answer in the quiz app, the answer button is highlighted with a green background, indicating the correct choice. This feature helps users monitor their performance and provides immediate feedback on their answer selection.
+<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/rightanswerpage.JPG"  width="600" height="400" /> 
 
-![App Screenshot]()
+<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Answerselect.JPG" width="600" height="400" /> 
 
 
 ## Feed back and score result
 
 After the user completes all the quiz questions, the quiz app presents a score result. 
-
 - The score result displays a congratulatory message if the user achieved a high score, a nice message if the score is average, and a sorry message if the score is low. The score result is a great way for the user to gauge their performance and assess their understanding of the quiz topic.
+
+<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/scoreresult.JPG" width="320" height="250" />
 
 
 ## Features to be added in the future        
- -Allow users to save their progress and return to the quiz at a later time.
- -Implement a leaderboard to display the highest scores achieved by all users.
+ - Allow users to save their progress and return to the quiz at a later time.
  - Integrate social media sharing functionality to allow users to share their quiz results with their friends.
  - Implement a feature that enables users to review the questions and answers they got wrong at the end of the quiz.
  - Allow users to select their preferred difficulty level or category of questions.
- -Include multimedia elements, such as images or videos, to make the quiz more engaging.
+ - Include multimedia elements, such as images or videos, to make the quiz more engaging.
 
 ## Technology Used: 
 
@@ -105,11 +108,18 @@ Array.from(document.getElementsByClassName('choice')).forEach(e => {e.disabled =
  - HTML : After running the code through the official W3C validator, no errors were found.
  - CSS : After running the code through the official (Jigsaw) Validator, no errors were found.
  
+ - JS hint checker
+
+ <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/69f5d5c97ac31a2579b0c3cd94795b0fbb104708/jshint.JPG"/>
+ 
  Accessibility: By running the project through Lighthouse, I have confirmed that the chosen colors and font size 
  are easy to read and accessible.
  
-  <img src=" "  width="500"/>
-  <img src=""/>
+  - For Mobile Devices
+  <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/lighthouse.JPG"/>
+  
+ - For Desktop 
+  <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/desktoplighthouse.JPG"/>
 
 
 ## Deployment 
@@ -117,6 +127,7 @@ The website has been successfully deployed on GitHub Pages. Here are the steps t
  - Navigate to the "Settings" page and select "Main" from the dropdown menu under "Source" to choose the main branch in the GitHub repository. Once selected on the main branch, GitHub Pages  provides a URL to the completed website.
 
 ## Credits 
-  
-  
+I have incorporated references from various sources, including youthful YouTube channels and web development tutorials, to complete this work. Notably, I have utilized the shuffle effect of questions, which was inspired by the techniques outlined in a web development tutorial by the channel "Web Dev Simplified
+   -   [codingNepal](https://www.youtube.com/watch?v=WUBhpSRS_fk&t=475s)  (https://www.youtube.com/watch?v=pQr4O1OITJo&t=1491s) 
+   -   [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&t=933s) 
 
