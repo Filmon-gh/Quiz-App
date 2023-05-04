@@ -1,7 +1,7 @@
 
 #  Code-Class Quiz      
 
-Code Class Quiz: designed to help beginners learn the basics of HTML, CSS, and JavaScript through a series of questions and answers.The app features an intuitive interface that allows the user to easily navigate through the quiz. The questions are displayed with corresponding numbers. The time function has been included as an optional feature for users who may wish to utilize the predetermined time set for the quiz questions. However, users are free to take as much time as they require, as this feature is not mandatory.
+Code Class Quiz: designed to help beginners learn the basics of HTML, CSS, and JavaScript through a series of questions and answers.The app features an intuitive interface that allows the user to easily navigate through the quiz. The questions are displayed with corresponding numbers,and users are encouraged to allocate an appropriate amount of time for each question. While a predetermined time limit has been included as an optional feature, users have the flexibility to take as much time as they need to complete the quiz
 
 One additional feature of the app is the shuffling of questions, which ensures that every time a user replays the quiz, the questions are arranged randomly and in a different order. This helps to keep the experience fresh and engaging for the user.Additionally, the app is designed to provide users with a real-time feedback experience, with green and red lights indicating correct and incorrect answers. At the end of the quiz, the user is presented with their result in a separate window, which includes their score.
 
@@ -12,11 +12,13 @@ One additional feature of the app is the shuffling of questions, which ensures t
 
 - As a beginner in web development, I want to practice my HTML, CSS, and JavaScript knowledge by taking a quiz.
 
--  I also want to be able to easily navigate through the quiz, with clear indication of which question I'm on and how much time I have remaining. 
+-  I also want to a user-friendly navigation system that provides clear indication of the current question I am answering while taking the quiz.
 
 - I want the questions to be displayed clearly, with shuffled order to prevent memorization. 
 
-- After answering each question, I want to see a general indication of whether my answer was correct or incorrect. 
+- After answering each question, I want to see a general indication of whether my answer was correct or incorrect.
+
+ - As a user, I am seeking a quiz application that provides a platform for efficient and flexible practice sessions. I require an app that enables me to work at my own pace, allowing me to take as much time as I need to understand and respond to each question.
 
 -  At the end of the quiz, I want to see my final score displayed in a separate window. 
 
@@ -30,7 +32,7 @@ One additional feature of the app is the shuffling of questions, which ensures t
 
 <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Frontpage.JPG"  width="700" height="500" /> 
 
-
+The time remaining feature is provided to aid users in adhering to the optimum time limit for each question, allowing for efficient practice sessions. Nevertheless, users are also free to take more time than indicated by the time remaining feature, as needed, to fully comprehend and assimilate the process
 ## Quiz-App area and Question area
 
 - The quiz question area is located below the main header  providing a  structured presentation of the quiz content. The question area is designed to showcase the question number and the question itself, along with the answer choices presented in A, B, C, and D format. for easy comprehension. 
