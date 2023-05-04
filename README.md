@@ -127,6 +127,7 @@ The website has been successfully deployed on GitHub Pages. Here are the steps t
  - Navigate to the "Settings" page and select "Main" from the dropdown menu under "Source" to choose the main branch in the GitHub repository. Once selected on the main branch, GitHub Pages  provides a URL to the completed website.
 
 ## Credits 
+I have incorporated references from various sources, including youthful YouTube channels and web development tutorials, to complete this work. Notably, I have utilized the shuffle effect of questions, which was inspired by the techniques outlined in a web development tutorial by the channel "Web Dev Simplified
    -   [codingNepal](https://www.youtube.com/watch?v=WUBhpSRS_fk&t=475s)  (https://www.youtube.com/watch?v=pQr4O1OITJo&t=1491s) 
-  
+   -   [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&t=933s) 
 
