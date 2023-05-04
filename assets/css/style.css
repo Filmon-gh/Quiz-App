@@ -1,7 +1,10 @@
-/*body {
-    background-color: rgb(170, 157, 157);
+
+body {
+    background-color: #3a89c156;
+    
   }
-*/
+  
+
 /* Define global CSS variables for correct, wrong, and neutral colors*/
 :root {
     --hue-correct: 145;
@@ -19,9 +22,18 @@
     border: 2px solid #333;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     background-color: hsl(var(--hue), 100%, 20%);
-    margin:0 auto;/* Center the container box horizontally */
+    margin:50px auto;/* Center the container box horizontally */
     
   }
+
+  .header {
+    margin:0 auto;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 150px;
+
+  }
+
 
   .correct {
     --hue: var(--hue-correct);
@@ -167,8 +179,8 @@
 
    #next {
     color: #333;
-    font-size: 18px;
-    font-weight: 400;   
+    font-size: 30px;
+    font-weight: bold;  
   }
 
 
@@ -185,10 +197,11 @@
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    background-color: #e5e8ec;
+    background-color: #ebd725;
     padding: 20px 30px;
     border-radius: 10px;
     border: 2px solid #333;
+    
     
   }
   .Result_box .icon {
@@ -200,14 +213,14 @@
 
   .Result_box .complete_text {
     font-size: 19px;
-    font-weight: 500; 
+    font-weight: bold; 
   }
 
   .Result_box .score_text  {
     display: flex;
     margin: 10px;
     font-size: 19px;
-    font-weight: 500;
+    font-weight: bold;
   }
 
    .score_text {
@@ -228,10 +241,20 @@
 
   }
 
+  hr {
+    
+    border: none;
+    border-top: 5px solid rgb(176, 223, 48);
+  }
+
   .hide {
     display: none;    
   }
-
+  #next {
+    color: #333;
+    font-size: 30px;
+    font-weight: bold;  
+  }
 
 
   @media (max-width: 900px) {
@@ -244,7 +267,6 @@
       font-size: 18px;
         
   }
-
 
     #time-container {
       margin-top: 1rem;
