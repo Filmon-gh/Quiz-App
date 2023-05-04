@@ -10,10 +10,12 @@
       <title>Document</title>
 </head>
 <body>
+    <h1 class="header">Code-Class Quiz</h1>
     <div class="container">
+     <!-- Quiz app header with title and time remaining display -->
      <header>
         <div id="title" >
-            <h1>Code-Class Quiz</h1>      
+            <h1>Quiz</h1>      
          </div>  
          <div id="time-container">
             <div class="timer">Time remaining:</div>
@@ -21,6 +23,7 @@
          </div>
      </header> 
      <hr>
+     <!-- Question and choices section -->
     <div id="question" class="hide">question
     </div>
 		<div id="choices" class="hide">
@@ -29,16 +32,18 @@
 			<button class="choice">choice1</button>
 			<button class="choice">choice1</button>
 		</div>
-        <hr>	
+        <hr>
+        <!-- Start and Next buttons -->	
         <div>
             <button id="Start">start-quiz</button>
             <button id="Next" class="hide">Next</button>     
-        </div>
+        </div>   
+     <!-- Displays the current question number out of total number of questions -->
      <footer>
         <p id="question-number" class="hide">question of x/y</p>
      </footer> 
     </div>
-
+    <!--Result box to display quiz completion status and score-->
     <div class="Result_box hide">
         <div class="icon">
             <i class="fas fa-crown"></i>
