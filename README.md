@@ -127,6 +127,6 @@ The website has been successfully deployed on GitHub Pages. Here are the steps t
  - Navigate to the "Settings" page and select "Main" from the dropdown menu under "Source" to choose the main branch in the GitHub repository. Once selected on the main branch, GitHub Pages  provides a URL to the completed website.
 
 ## Credits 
-  
+   -   [codingNepal](https://www.youtube.com/watch?v=WUBhpSRS_fk&t=475s)  (https://www.youtube.com/watch?v=pQr4O1OITJo&t=1491s) 
   
 
