@@ -108,6 +108,7 @@ Updates the status of the container and each answer button based on the correctn
 */
 function selectAnswer(e) {
     Array.from(document.getElementsByClassName('choice')).forEach(e => {e.disabled = true});
+    clearInterval(countdown);
     const chosenButton = e.target;
     const isCorrect  = chosenButton.dataset.correct;
     updateElementStatus(container, isCorrect );
@@ -163,9 +164,21 @@ function startTimer(time) {
       timerElement.textContent = "00";
       NextQuestion(); 
     clearInterval(countdown);
+    disableAllChoices();
+    nextQuestionButton.classList.remove("hide"); 
     }  
 }
 }  
+
+nextQuestionButton.addEventListener('click', () => {
+  if (randomizedQuestions.length > currentQuestion) {
+    clearInterval(countdown);
+    startTimer(timeLeft);
+    NextQuestion();
+  } else {
+    showresultBox();
+  }
+});
 
 // The Code structures for the result box below referenced from Codnig Nepal's YouTube tutorial (link in readme)
 /**
@@ -192,6 +205,13 @@ function showresultBox(){
     scoreResult.innerHTML=scoreElement ;
   }
 } 
+
+function disableAllChoices() {
+  Array.from(document.getElementsByClassName('choice')).forEach(choice => {
+    choice.disabled = true;
+  });
+}
+
 
 // Add event listener to restartQuiz button to reload the page on click
 restartQuiz.onclick = () => {
