@@ -1,7 +1,7 @@
 
 #  Code-Class Quiz      
 
-Code Class Quiz: designed to help beginners learn the basics of HTML, CSS, and JavaScript through a series of questions and answers.The app features an intuitive interface that allows the user to easily navigate through the quiz. The questions are displayed with corresponding numbers,and users are encouraged to allocate an appropriate amount of time for each question. While a predetermined time limit has been included as an optional feature, users have the flexibility to take as much time as they need to complete the quiz
+Code Class Quiz: designed to help beginners learn the basics of HTML, CSS, and JavaScript through a series of questions and answers.The app features an intuitive interface that allows the user to easily navigate through the quiz. The questions are displayed with corresponding numbers,and users are encouraged to allocate an appropriate amount of time for each question. While a predetermined time limit has been included as an optional feature, users have the flexibility to take as much time as they need to complete the quiz.
 
 One additional feature of the app is the shuffling of questions, which ensures that every time a user replays the quiz, the questions are arranged randomly and in a different order. This helps to keep the experience fresh and engaging for the user.Additionally, the app is designed to provide users with a real-time feedback experience, with green and red lights indicating correct and incorrect answers. At the end of the quiz, the user is presented with their result in a separate window, which includes their score.
 
@@ -32,7 +32,17 @@ One additional feature of the app is the shuffling of questions, which ensures t
 
 <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Frontpage.JPG"  width="700" height="500" /> 
 
-The time remaining feature is provided to aid users in adhering to the optimum time limit for each question, allowing for efficient practice sessions. Nevertheless, users are also free to take more time than indicated by the time remaining feature, as needed, to fully comprehend and assimilate the process.
+
+## Time Management in the Quiz App
+"In the quiz app, a timer is integrated to add an extra element of challenge and excitement. Here's how the time management works:"
+
+ - When a user starts a quiz, the timer is set to a default of 20 seconds.
+ - Users can answer the questions at their own pace within this time limit.
+ - The timer counts down continuously from 20 seconds.
+ - After the user selects an answer, the timer stops counting down, and they can proceed using the "Next" button.
+ - If the timer runs out before the user proceeds to the next question, they'll no longer have the option to make a choice. It's time to move on!
+This time management system ensures that the quiz is engaging and keeps participants on their toes throughout the experience.
+
 ## Quiz-App area and Question area
 
 - The quiz question area is located below the main header  providing a  structured presentation of the quiz content. The question area is designed to showcase the question number and the question itself, along with the answer choices presented in A, B, C, and D format. for easy comprehension. 
