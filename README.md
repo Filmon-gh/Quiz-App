@@ -33,7 +33,7 @@ One additional feature of the app is the shuffling of questions, which ensures t
 <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Frontpage.JPG"  width="700" height="500" /> 
 
 
-## Time Management in the Quiz App
+## Time Management in the Quiz-App
 "In the quiz app, a timer is integrated to add an extra element of challenge and excitement. Here's how the time management works:"
 
  - When a user starts a quiz, the timer is set to a default of 20 seconds.
@@ -79,7 +79,7 @@ After the user completes all the quiz questions, the quiz app presents a score r
 
 ## Technology Used: 
 
- - I used Visual Studio Code as the primary code editor for this project with HTML, CSS, and JavaScript.
+ - For the initial stages of this project, I leveraged Visual Studio Code as the primary code editor, working with HTML, CSS, and JavaScript. However, to address specific time management and functionality-related challenges, I later transitioned to Gitpod, a cloud-based integrated development environment (IDE).
 
  - GitHub: The project hosted on GitHub, a web-based hosting service for version control using Git. 
 
