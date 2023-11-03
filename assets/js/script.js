@@ -52,7 +52,7 @@ function startQuiz() {
     resultBox.classList.add("hide");
     quizQuestion.classList.remove("hide");
     quizChoices.classList.remove("hide"); 
-    randomizedQuestions = questions.sort(() => Math.random() - .5);
+    randomizedQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestion = 0;
     totalQuestions = randomizedQuestions.length;
     questionNumberElement.classList.remove("hide");// Show the question number element by removing the "hide" class.
@@ -107,7 +107,7 @@ Updates the status of the container and each answer button based on the correctn
  the answer selected by the user.
 */
 function selectAnswer(e) {
-    Array.from(document.getElementsByClassName('choice')).forEach(e => {e.disabled = true});
+    Array.from(document.getElementsByClassName('choice')).forEach(e => {e.disabled = true;});
     clearInterval(countdown);
     const chosenButton = e.target;
     const isCorrect  = chosenButton.dataset.correct;
