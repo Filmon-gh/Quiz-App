@@ -120,9 +120,12 @@ Array.from(document.getElementsByClassName('choice')).forEach(e => {e.disabled =
  
  - JS hint checker
 
- <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/69f5d5c97ac31a2579b0c3cd94795b0fbb104708/jshint.JPG"/>
- 
- Accessibility: By running the project through Lighthouse, I have confirmed that the chosen colors and font size 
+ <img src="https://github.com/Filmon-gh/Quiz-App/blob/main/images-pr2/js.hint%20checker.png"/>
+
+  The JavaScript code has been meticulously inspected and analyzed using the JS Hint checker, and  it has passed without a single error.
+    
+### Accessibility:
+By running the project through Lighthouse, I have confirmed that the chosen colors and font size 
  are easy to read and accessible.
  
   - For Mobile Devices
