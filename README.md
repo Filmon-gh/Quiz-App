@@ -1,7 +1,7 @@
 
-#  Code-Class Quiz      
+#  Quiz App Documentation    
 
-Code Class Quiz: designed to help beginners learn the basics of HTML, CSS, and JavaScript through a series of questions and answers.The app features an intuitive interface that allows the user to easily navigate through the quiz. The questions are displayed with corresponding numbers,and users are encouraged to allocate an appropriate amount of time for each question. While a predetermined time limit has been included as an optional feature, users have the flexibility to take as much time as they need to complete the quiz.
+Code-Class Quiz: designed to help beginners learn the basics of HTML, CSS, and JavaScript through a series of questions and answers.The app features an intuitive interface that allows the user to easily navigate through the quiz. The questions are displayed with corresponding numbers,and users are encouraged to allocate an appropriate amount of time for each question. While a predetermined time limit has been included as an optional feature, users have the flexibility to take as much time as they need to complete the quiz.
 
 One additional feature of the app is the shuffling of questions, which ensures that every time a user replays the quiz, the questions are arranged randomly and in a different order. This helps to keep the experience fresh and engaging for the user.Additionally, the app is designed to provide users with a real-time feedback experience, with green and red lights indicating correct and incorrect answers. At the end of the quiz, the user is presented with their result in a separate window, which includes their score.
 
