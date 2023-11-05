@@ -67,7 +67,7 @@ The figure below demonstrates how the quiz app interacts with the user when they
 After the user completes all the quiz questions, the quiz app presents a score result. 
 - The score result displays a congratulatory message if the user achieved a high score, a nice message if the score is average, and a sorry message if the score is low. The score result is a great way for the user to gauge their performance and assess their understanding of the quiz topic.
 
-<img src="https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/Answerselect.JPG?raw=true" width="320" height="250" />
+<img src="https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/scoreresult.JPG?raw=true" width="320" height="250" />
 
 
 ## Features to be added in the future        
@@ -129,9 +129,11 @@ By running the project through Lighthouse, I have confirmed that the chosen colo
  are easy to read and accessible.
  
   - For Mobile Devices
+    
   ![Mobile Lighthouse Score](https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/lighthouse.JPG?raw=true)
   
- - For Desktop 
+ - For Desktop
+   
   ![Desktop Lighthouse Score](https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/desktoplighthouse.JPG?raw=true)
 
 
