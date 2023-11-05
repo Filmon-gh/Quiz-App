@@ -30,7 +30,7 @@ One additional feature of the app is the shuffling of questions, which ensures t
 - The quiz app's start page features the quiz app's name and a display area for the start of the quiz. At the bottom of the display area, users are presented with options to start the quiz. Additionally, on the top-right section of the page, users can see a timer.
 - In the quiz app, the "start" function is responsible for initializing the quiz by displaying the first question and answer choices, while hiding the start button.
 
-<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Frontpage.JPG"  width="700" height="500" /> 
+<img src="https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/Frontpage.JPG?raw=true"  width="700" height="500" /> 
 
 
 ## Time Management in the Quiz-App
@@ -49,7 +49,7 @@ This time management system ensures that the quiz is engaging and keeps particip
 - The answer choices have interactive displays, highlighting the choice as the user moves the cursor towards it to indicate that the user is in the choice section of the quiz area. Additionally, the question number is also presented in the footer section, incrementing respectively as the number of questions covered increases, to keep the user informed about their progress.
 - The "next" function is responsible for transitioning to the next question and updating the display with the new question and answer choices.
 
-<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/questionpage.JPG" width="700" height="500" /> 
+<img src="https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/questionpage.JPG?raw=true" width="700" height="500" /> 
  
 
 
@@ -57,7 +57,7 @@ This time management system ensures that the quiz is engaging and keeps particip
 
 The figure below demonstrates how the quiz app interacts with the user when they select the right or wrong answer. When the user selects the wrong answer, the entire quiz app container area is highlighted with a red background color. 
 - When the user selects the correct answer in the quiz app, the answer button is highlighted with a green background, indicating the correct choice. This feature helps users monitor their performance and provides immediate feedback on their answer selection.
-<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/rightanswerpage.JPG"  width="600" height="400" /> 
+<img src="https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/rightanswerpage.JPG?raw=true"  width="600" height="400" /> 
 
 <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/Answerselect.JPG" width="600" height="400" /> 
 
@@ -67,7 +67,7 @@ The figure below demonstrates how the quiz app interacts with the user when they
 After the user completes all the quiz questions, the quiz app presents a score result. 
 - The score result displays a congratulatory message if the user achieved a high score, a nice message if the score is average, and a sorry message if the score is low. The score result is a great way for the user to gauge their performance and assess their understanding of the quiz topic.
 
-<img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/scoreresult.JPG" width="320" height="250" />
+<img src="https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/Answerselect.JPG?raw=true" width="320" height="250" />
 
 
 ## Features to be added in the future        
@@ -120,7 +120,7 @@ Array.from(document.getElementsByClassName('choice')).forEach(e => {e.disabled =
  
  - JS hint checker
 
- <img src="https://github.com/Filmon-gh/Quiz-App/blob/main/images-pr2/js.hint%20checker.png"/>
+ ![JS Hint Checker](https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/js.hint%20checker.png?raw=true)
 
   The JavaScript code has been meticulously inspected and analyzed using the JS Hint checker, and  it has passed without a single error.
     
@@ -129,10 +129,10 @@ By running the project through Lighthouse, I have confirmed that the chosen colo
  are easy to read and accessible.
  
   - For Mobile Devices
-  <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/lighthouse.JPG"/>
+  ![Mobile Lighthouse Score](https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/lighthouse.JPG?raw=true)
   
  - For Desktop 
-  <img src="https://raw.githubusercontent.com/Filmon-gh/Quiz-App/cf7b01120a1ee6177a4824898f2e1ffc49e0fbfe/images-pr2/desktoplighthouse.JPG"/>
+  ![Desktop Lighthouse Score](https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/desktoplighthouse.JPG?raw=true)
 
 
 ## Deployment 
